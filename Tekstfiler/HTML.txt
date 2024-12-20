@@ -1,0 +1,108 @@
+HTML: Byggeblokkene for å lage ei HTML side
+CSS: Endre stilen på nettsida
+Javascript: Legg inn funksjonalitet til nettsida.
+index.html: Heimesida di
+! (tab) viss du vil lage den nødvendige koden.
+<!DOCTYPE html> = På toppen av dokumentet, fortel at det skal vere eit HTML dokument.
+	• <html> = Under og heilt i enden. Same som det over.
+<head> = Metadata-en; Det nettsida må vite, men som ikkje visast. Kan bruke den til å laste inn ting utafor det visuelle av nettsida som CSS.
+<body> = Det som blir vist visuelt på nettsida (fungerer òg på andre skrifter).
+	• style = : For å endre stilen på nettsida vår
+		○ background color
+		○ color
+			§ rgb()
+			§ Kan òg legge til #-verdiar for fargane
+		○ ; etter fargen for å fortsette å endre fargen på noko anna du vil andre fargen på.
+</> = avslutning
+<h1> = overskrift
+	• Opptil 6
+	• style:
+<span> = Markering for ein del av teksten
+<div> = Markering for ein større del av teksten
+<br> = set inn ei ny linje, krev ikkje </br>.
+<hr> = For å legge til ei ny linje med ei linje inni mellomrommet, krev ikkje </hr>.
+<p> = paragraf
+<em> = kursiv tekst (legg vekt på teksten; skjermlesar)
+<i> = kursiv tekst (visuell kursiv)
+<b> = feit tekst (visuell feit tekst)
+<strong> = feit tekst (legg vekt på teksten; skjermlesar)
+<u> = understrek
+<big> = STOR TEKST
+<small> = Liten tekst
+<sub> = Tekst som ligg litt under.
+<sup> = Tekst som ligg litt over.
+<del> = stroke over tekst
+<mark> = Markert tekst (bakgrunn bak teksten)
+<section> = seier kva for element som går saman.
+<ul> = uordna liste
+<li> = kulepunkt
+<ol> = ordna liste/nummerert liste
+<dd> = Overskrifta på den normale lista vår
+<dt> = definisjonen/det under overskrifta
+<!-- (tekst --> = Kommentar, viser ikkje på nettsida.
+<a> = Å linke to nettsider til kvarandre.
+<a href = "..." target=_blank title = "..."> Nettsida </a>
+	• <a href = "..."> = Fortell kva for lenke nettsida skal linke til. </a> i slutten.
+	• target="_blank" = Opner nettsida i ei ny fane, skrivast i det første <a>-elementet.
+	• target="_self for å opne nettsida som normalt.
+	• title = For å gi lenka ein tittel når du held musa over den.
+	• href="mailto:(emailen)... for å sende nokon ein email.
+<type> = Kjem an på, men generelt typen ting du ønsker å ta i bruk.
+
+<img src = ".."> = For å importere bilde. Treng ikkje noke i slutten.
+	• width = "..." = breidde
+	• height = "..." = høgde
+	• alt = ".." = Bildebeskrivelse (skjermlesar, viser berre viss bilde ikkje viser f.eks)
+	• title = tekst når du har musa over bildet.
+	• <a href = "..."> (det andre) <a>: For å ta oss til ei lenke når vi har musa over bildet.
+
+<audio src = "..." controls type = "..."> </audio> = For å legge inn ei audiofil
+	• autoplay = Speler av av seg sjølv.
+	• loop = For å loope.
+	• I tilfelle videoen ikkje fungerer: Fjerne src =, og legg til <source src  = "..."> så mange gongar du vil.
+<video src = "..." controls type = "..." width = "..." height = ".."> </video> = For å legge til ei audio fil.
+controls = kontroll av audioet; spele av, stoppe, osv.
+type = audiotypen
+<table border="...">
+	• table = Gir oss ein tabell
+	• border = gir tabelln vår ei ramme
+		○ bgcolor="..."
+		○ align="center"
+		○ width="..."
+	• <tr> = Radane i tabellen
+		○ bgcolor="..."
+		○ align="center"
+	• <th> = Det øvste i tabellen.
+		○ width="..."
+	• <td> = Innhaldet i tabellen
+
+<form> = For å legge til eit skjema
+	• <lable> merkelapp/etikett
+	• <input name = "..."> <br> = Legg til ein plass vi kan skrive inn i merkelappen vi set inn i.
+		○ name="fnamn"
+		○ placeholder="...", for å vise tekst i skjemaet før vi skriv inn.
+		○ <input type = "reset">, "send inn" knapp
+		○ <input type = "sumbit", "tilbakestill" knapp
+		○ <input... required, viss det er nødvendig at dei fyller ut skjemaet.
+	• <form type = "..." for å endre skjemaet til noko.
+		○ <form action="nettsida" for å gå til nettsida etter vi har fylt ut noko.
+			§ <... method="POST" for å lagre inndataene vi sendte inn
+	• for (fnamn) på label og i slutten av input id="fnamn": Viss eg klikker på knappen, går den inn på skjemaet
+<button> = Legg til ein knapp å trykke på
+	• <a href"..."> og </a> mellom <buttom> for å få ein link når du trykkar på knappen.
+	• <button disabled> for å deaktivere knappen.
+	• border: radius"pikslane" for å endre kor tjukke linjene utafor knappen er
+	• onclick="...", gjer ting vi har sagt den skal gjere i javascript.
+<title> = Tittelen på nettsida
+	• Tittelen når vi har musa over ei lenke, bilde, etc.
+<meta name = "description" content = "..." = Beskrivelsen om kompaniet og kva søkemotoren kan finne.
+	• Keywords = For søkemotoren
+	• author = han/ho som laga nettsida
+	• viewport = For å ha nettsida scale for mobilbrukarare.
+		○ content = "width = device-width", initial-scale 1.0
+	• For å fortelje kva for type character encoding vi brukar.
+	• https-equiv="refresh" content="...": For å refreshe nettlesaren etter så-så mange sekund.
+Ikon for nettsida: type <link rel = "icon" type = "image/x-icon" href = "..."> = For å legge til nettsideikon.
+<iframe src = "..." : putt inn innhald frå andre kjelder til HTML dokumentet ditt.
+	• Mange nettsider har skrudd av iframe.
+	• style="border": 0, for å fjerne linjene rundt iframe-en.
