@@ -11,6 +11,10 @@ function appendToDisplay(input) {
     display.value += input;
 }
 
+function writableDisplayValidator(input) {
+    input.value = input.value.replace(/[^0-9+\-?*?/?.?() ]/g, '');
+}
+
 function removePrevious() {
     display.value = display.value.slice(0,-1);
 }

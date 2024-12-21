@@ -27,7 +27,7 @@
 <!--For å kunne skrive direkte inn i kalkulatoren (seinare kanskje).-->
             <!--<input id="display" type="text" oninput="validateMathInput(this)" placeholder="Numbers here...">-->
 <!--Området vi skriv inn i.-->
-            <input id="display" readonly placeholder="Numbers here...">
+            <input id="display" type="text" oninput="writableDisplayValidator(this)" placeholder="Numbers here...">
 
             <div id="topButtonRows">
                 <button onclick="appendToDisplay('ans')">ans</button>
@@ -43,7 +43,7 @@
                 <button onclick="appendToDisplay()">√x</button>
                 <button onclick="appendToDisplay()">x^x</button>
                 <button onclick="appendToDisplay()">x^2</button>
-                <button onclick="appendToDisplay()">log_x(x)</button>
+                <button id="log_x" onclick="appendToDisplay()">logx(x)</button>
                 <button onclick="appendToDisplay('7')">7</button>
                 <button onclick="appendToDisplay('8')">8</button>
                 <button onclick="appendToDisplay('9')">9</button>
