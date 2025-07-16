@@ -1,4 +1,4 @@
-//For å kunne skrive direkte inn i kalkulatoren (seinare kanskje).
+//To write directly into the calculator (maybe later)
 //function validateMathInput(input) {
 //    input.value = input.value.replace(/[^0-9+\-*/.() ]/g, 'Math.sin Math.cos');
 //}

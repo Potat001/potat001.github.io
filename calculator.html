@@ -12,11 +12,10 @@
             <a href="index.html">
                 <button class="navs">Homepage</button>
             </a>
-            <a href="kalkulator.html">
+            <a href="calculator.html">
                 <button class="navs">Calculator</button>
                 </a>
             </div>
-        
         <div class="navButtons">
             <button class="navsButton">K</button>
         </div>
@@ -24,9 +23,9 @@
     </header>
     <main>
         <div id="calculator">
-<!--For å kunne skrive direkte inn i kalkulatoren (seinare kanskje).-->
-            <!--<input id="display" type="text" oninput="validateMathInput(this)" placeholder="Numbers here...">-->
-<!--Området vi skriv inn i.-->
+<!--To write directly into the calculator (maybe later)-->
+        <!--<input id="display" type="text" oninput="validateMathInput(this)" placeholder="Numbers here...">-->
+<!--The area we write into-->
             <input id="display" type="text" oninput="writableDisplayValidator(this)" placeholder="Numbers here...">
 
             <div id="topButtonRows">
@@ -37,7 +36,6 @@
                 <button onclick="bracketOne()">(</button>
                 <button onclick="bracketTwo()">)</button>
             </div>
-
             <div id="lowerButtonRows">
                 <button onclick="appendToDisplay()">x/x</button>
                 <button onclick="appendToDisplay()">√x</button>
@@ -67,9 +65,7 @@
             </div>
         </div>
     </main>
-
     <footer>
-
     </footer>
 <script src="index.js"></script>
 </body>
