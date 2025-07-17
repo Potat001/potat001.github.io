@@ -1,17 +1,28 @@
+* {
+    font-family: Tahoma, sans-serif;
+}
+
 h1, h2, h3, h4, h5, h6 {
     color: white;
     text-decoration: none;
-    -webkit-text-stroke: 0.25px black;
+    -webkit-text-stroke: 0.15px black;
     text-shadow: 1.15px 1.15px 1.15px black;
-    font-family: Tahoma, sans-serif;
 }
 
 #homePageTitle {
     margin-top:100px;
 }
 
+#homePageText {
+    text-align: center;
+    margin-top: 300px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 body {
-    background-color:rgb(71, 71, 71);
+    background-color:rgb(24, 24, 24);
 }
 
 .navBars {
@@ -24,7 +35,7 @@ body {
 .navs {
     float:left;
     height: 20px;
-    width:calc(100% / 3);
+    width:calc(100% / 4);
     background-color: rgb(172, 172, 172);
 }
 
@@ -40,6 +51,9 @@ body {
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 60px;
 }
 #homePagePicture {
     width: 100%;
