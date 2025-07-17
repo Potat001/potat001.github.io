@@ -22,11 +22,26 @@ function removePrevious() {
 function clearDisplay() {
     display.value = "";
 }
-function trigonimetricFunctions() {
-    if(display.value = "sin") {
-        display.value = Math.sin;
-    } else if(display.value = "cos") {
-        display.value = Math.cos;
+function trigonimetricFunctions(funcType) {
+    try {
+        let currentValue = parseFloat(display.value);
+
+        let radians = currentValue * (Math.PI / 180);
+
+        let result;
+        switch(funcType) {
+            case 'sin': result = Math.sin(radians);
+                break;
+            case 'cos': result = Math.cos(radians);
+                break;
+            case 'tan': result = Math.tan(radians);
+                break;
+            default:
+                throw new Error('Unknown function');
+        }
+        display.value = result;
+    } catch(error) {
+        display.value = "Error";
     }
 }
 
@@ -36,6 +51,9 @@ function bracketOne() {
 
 function bracketTwo() {
     display.value += ")";
+}
+function PI() {
+    display.value += π;
 }
 function calculate() {
     try {
