@@ -13,7 +13,7 @@ h1, h2, h3, h4, h5, h6 {
     margin-top:100px;
 }
 
-#homePageText {
+#centeredText {
     text-align: center;
     margin-top: 300px;
     max-width: 700px;
@@ -23,10 +23,14 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     background-color:rgb(24, 24, 24);
+    margin-left: 0;
+    margin-right: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .navBars {
-    position:fixed;
+    position:absolute;
     top:0;
     left:0;
     width: 100%;
@@ -35,7 +39,7 @@ body {
 .navs {
     float:left;
     height: 20px;
-    width:calc(100% / 4);
+    width:calc(60% / 4);
     background-color: rgb(172, 172, 172);
 }
 
@@ -47,14 +51,13 @@ body {
     background-color:rgb(100, 100, 100);
 }
 
-.pictureText {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-    font-size: 60px;
+.languageSwitch {
+    float: right;
+    height: 20px;
+    width:calc(20% / 3);
+    background-color: rgb(172, 172, 172);
 }
+
 #homePagePicture {
     width: 100%;
     height: 250px;
@@ -129,4 +132,28 @@ h1 {
 
 #log_x {
     font-size:10px;
+}
+
+#favoritePicturesAlignmentHorizontal {
+    margin-top: 16px;
+    width: 49.5%;
+    height: auto;
+}
+
+#favoritePicturesAlignmentVertical {
+    margin-top: 16px;
+    width: 49.5%;
+    height: 900px;
+}
+
+.PictureContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-right: 50%;
+}
+
+.PictureText {
+    position: absolute;
 }
