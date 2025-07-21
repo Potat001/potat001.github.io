@@ -27,41 +27,31 @@
         <!--<input id="display" type="text" oninput="validateMathInput(this)" placeholder="Numbers here...">-->
 <!--The area we write into-->
             <input id="display" type="text" oninput="writableDisplayValidator(this)" placeholder="Numbers here...">
-
-            <div id="topButtonRows">
-                <button onclick="PI()">π</button>
+            <div id="buttonRows">
                 <button onclick="trigonimetricFunctions('sin')">sin</button>
                 <button onclick="trigonimetricFunctions('cos')">cos</button>
                 <button onclick="trigonimetricFunctions('tan')">tan</button>
+                <button onclick="removePrevious()">⌫</button>
                 <button onclick="bracketOne()">(</button>
                 <button onclick="bracketTwo()">)</button>
-            </div>
-            <div id="lowerButtonRows">
-                <button onclick="appendToDisplay()">x/x</button>
-                <button onclick="appendToDisplay()">√x</button>
-                <button onclick="appendToDisplay()">x^x</button>
-                <button onclick="appendToDisplay()">x^2</button>
-                <button id="log_x" onclick="appendToDisplay()">logx(x)</button>
+                <button onclick="clearDisplay()">Clear</button>
+                <button onclick="appendToDisplay('/')">÷</button>
                 <button onclick="appendToDisplay('7')">7</button>
                 <button onclick="appendToDisplay('8')">8</button>
                 <button onclick="appendToDisplay('9')">9</button>
-                <button onclick="removePrevious()">⌫</button>
-                <button onclick="appendToDisplay()">?</button>
+                <button onclick="appendToDisplay('*')">*</button>
                 <button onclick="appendToDisplay('4')">4</button>
                 <button onclick="appendToDisplay('5')">5</button>
                 <button onclick="appendToDisplay('6')">6</button>
-                <button onclick="appendToDisplay('*')">*</button>
-                <button onclick="appendToDisplay('/')">÷</button>
+                <button onclick="appendToDisplay('+')">+</button>
                 <button onclick="appendToDisplay('1')">1</button>
                 <button onclick="appendToDisplay('2')">2</button>
                 <button onclick="appendToDisplay('3')">3</button>
-                <button onclick="appendToDisplay('+')">+</button>
                 <button onclick="appendToDisplay('-')">-</button>
+                <button onclick="root()">√◼</button>
                 <button onclick="appendToDisplay('0')">0</button>
                 <button onclick="appendToDisplay('.')">.</button>
-                <button onclick="appendToDisplay">?</button>
-                <button onclick="clearDisplay()">C</button>
-                <button onclick="calculate()">EXE</button>
+                <button onclick="calculate()">=</button>
             </div>
         </div>
     </main>

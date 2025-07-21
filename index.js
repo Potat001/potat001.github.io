@@ -53,7 +53,8 @@ function bracketTwo() {
     display.value += ")";
 }
 function PI() {
-    display.value += π;
+
+    display.value += Math.PI;
 }
 function calculate() {
     try {
@@ -61,4 +62,11 @@ function calculate() {
     } catch(error) {
         display.value = "Error";
     }
+}
+
+function root() {
+        let currentValue = parseFloat(display.value);
+
+        let result = Math.sqrt(currentValue);
+        display.value = result;
 }
