@@ -72,7 +72,17 @@ function root() {
 }
 
 //testingWithJS
-const button = DocumentFragment.getElementById("JSTestingButton");
-button.addEventListener("click", () => {
-    console.log("Button clicked!");
-})
+
+const JSButton = document.getElementById('JSTestingButton');
+const box = document.getElementById('box');
+
+JSButton.addEventListener('mouseover', function() {
+    JSButton.style.animation = 'moveButton 0.5s linear infinite alternate';
+    JSButton.innerHTML = 'Whoops, there it goes!';
+});
+
+JSButton.addEventListener('click', function() {
+    JSButton.style.animation = 'none';
+    JSButton.innerHTML = 'You caught me!';
+}
+)
