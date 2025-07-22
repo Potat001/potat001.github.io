@@ -72,17 +72,39 @@ function root() {
 }
 
 //testingWithJS
+let hoverCount = 0;
+const JSButton = document.getElementById("JSTestingButton");
+const box = document.getElementById("box");
 
-const JSButton = document.getElementById('JSTestingButton');
-const box = document.getElementById('box');
+JSButton.addEventListener("mouseover", function() {
+    hoverCount++;
 
-JSButton.addEventListener('mouseover', function() {
-    JSButton.style.animation = 'moveButton 0.5s linear infinite alternate';
-    JSButton.innerHTML = 'Whoops, there it goes!';
+    switch(true) {
+        case (hoverCount === 1 || hoverCount === 2):
+            JSButton.style.animation = "moveButton 5s linear infinite alternate";
+            JSButton.innerHTML = "Whoops, there it goes!";
+            break;
+        case (hoverCount >= 3 && hoverCount <= 9):
+            JSButton.innerHTML = `That's ${hoverCount} attempts!`;
+            break;
+        case (hoverCount >= 10 && hoverCount <= 49):
+            JSButton.innerHTML = `That's ${hoverCount} attemps, come on!`;
+            break;
+        case (hoverCount >= 50 && hoverCount <= 99):
+            JSButton.innerHTML = `${hoverCount} attempts, you're so close!`
+            break;
+        case (hoverCount >= 100):
+            JSButton.innerHTML = `That's enough (${hoverCount}), here you go, click it!`
+            JSButton.style.animation = "none";
+        }
+
+    console.log(`Hovered over ${hoverCount} times`)
 });
 
-JSButton.addEventListener('click', function() {
-    JSButton.style.animation = 'none';
-    JSButton.innerHTML = 'You caught me!';
-}
-)
+//JSButton.addEventListener('mouseout', function()  {
+//    JSButton.innerHTML = "So close!";
+//})
+JSButton.addEventListener("click", function() {
+    JSButton.style.animation = "none";
+    JSButton.innerHTML = "You caught me!";
+});

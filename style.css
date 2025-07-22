@@ -161,8 +161,10 @@ body {
 }
 
 #JSTestingButton {
+/*
     margin-right: 50%;
     margin-left: 20%;
+*/
     margin-top: 100px;
     width: 100px;
     height: 100px;
@@ -177,5 +179,5 @@ body {
 }
 @keyframes moveButton {
     from { left: 0; }
-    to { left: 300px; }
+    to { left: 50%; }
 }
