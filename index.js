@@ -70,3 +70,9 @@ function root() {
         let result = Math.sqrt(currentValue);
         display.value = result;
 }
+
+//testingWithJS
+const button = DocumentFragment.getElementById("JSTestingButton");
+button.addEventListener("click", () => {
+    console.log("Button clicked!");
+})
