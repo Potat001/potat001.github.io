@@ -72,9 +72,13 @@ function root() {
 }
 
 //testingWithJS
+
 let hoverCount = 0;
 const JSButton = document.getElementById("JSTestingButton");
 const box = document.getElementById("box");
+const rainbowColors = ["red", "blue", "green", "yellow", "purple"];
+let currentIndex = 0;
+
 
 JSButton.addEventListener("mouseover", function() {
     hoverCount++;
@@ -82,16 +86,21 @@ JSButton.addEventListener("mouseover", function() {
     switch(true) {
         case (hoverCount === 1 || hoverCount === 2):
             JSButton.style.animation = "moveButton 5s linear infinite alternate";
+            JSButton.style.backgroundColor = "FireBrick";
             JSButton.innerHTML = "Whoops, there it goes!";
             break;
         case (hoverCount >= 3 && hoverCount <= 9):
             JSButton.innerHTML = `That's ${hoverCount} attempts!`;
+            JSButton.style.backgroundColor = "green";
             break;
-        case (hoverCount >= 10 && hoverCount <= 49):
-            JSButton.innerHTML = `That's ${hoverCount} attemps, come on!`;
+        case (hoverCount >= 10 && hoverCount <= 39):
+            JSButton.innerHTML = `That's ${hoverCount} attempts, come on!`;
+            JSButton.style.backgroundColor = "DodgerBlue";
             break;
-        case (hoverCount >= 50 && hoverCount <= 99):
+        case (hoverCount >= 40 && hoverCount <= 99):
             JSButton.innerHTML = `${hoverCount} attempts, you're so close!`
+            currentIndex = (currentIndex + 1) % rainbowColors.length;
+            JSButton.style.backgroundColor = rainbowColors[currentIndex];
             break;
         case (hoverCount >= 100):
             JSButton.innerHTML = `That's enough (${hoverCount}), here you go, click it!`
