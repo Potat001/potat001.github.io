@@ -74,47 +74,61 @@ function root() {
 //testingWithJS
 
 let hoverCount = 0;
+let clickCount = 0;
 const JSButton = document.getElementById("JSTestingButton");
 const box = document.getElementById("box");
 
 
 JSButton.addEventListener("mouseover", function() {
-    hoverCount++;
-
+    if(hoverCount < 100) {
+        hoverCount++;
+    }
+    else {
+        hoverCount = 100;
+    }
+    catchButtonText.innerHTML = "Catch the button!!!";
     switch(true) {
-        case (hoverCount === 1 || hoverCount === 2):
+        case (hoverCount === 1 || hoverCount === 2 || clickCount < 1):
             JSButton.style.animation = "moveButton 5s linear infinite alternate";
             JSButton.style.backgroundColor = "FireBrick";
             JSButton.innerHTML = "Whoops, there it goes!";
             break;
-        case (hoverCount >= 3 && hoverCount <= 9):
+        case (hoverCount >= 3 && hoverCount <= 9 || clickCount < 1):
+            JSButton.style.animation = "moveButton 2s linear infinite alternate";
             JSButton.innerHTML = `That's ${hoverCount} attempts!`;
             JSButton.style.backgroundColor = "green";
             break;
-        case (hoverCount >= 10 && hoverCount <= 39):
+        case (hoverCount >= 10 && hoverCount <= 39 || clickCount < 1):
+            JSButton.style.animation = "moveButton 2s linear infinite";
             JSButton.innerHTML = `That's ${hoverCount} attempts, come on!`;
             JSButton.style.backgroundColor = "DodgerBlue";
             break;
-        case (hoverCount >= 40 && hoverCount <= 99):
+        case (hoverCount >= 40 && hoverCount <= 99 || clickCount < 1):
             JSButton.style.backgroundColor = "DodgerBlue";
-            JSButton.innerHTML = `${hoverCount} attempts, you're so close!`
-            JSButton.style.animation = "moveButton 5s linear infinite alternate";
-            JSButton.style.animation = "rainbowButton 1s infinite"
+            JSButton.innerHTML = `${hoverCount} attempts, you're got this!!!`
+            JSButton.style.animation = "rainbowButton 2s linear infinite";
             break;
-        case (hoverCount >= 100):
+        case (hoverCount >= 100 || clickCount < 1):
             JSButton.innerHTML = `That's enough (${hoverCount}), here you go, click it!`
             JSButton.style.animation = "none";
             JSButton.style.backgroundColor = "gray";
+            hoverCount = 100;
+            break;
+        case (clickCount >= 1):
+            JSButton.style.animation = "none";
+            JSButton.innerHTML = `You caught me after ${hoverCounts} mouse hovers!`;
+            JSButton.style.backgroundColor = "gray";
+            console.log(`Hovered over ${hoverCount} times`);
         }
-
-    console.log(`Hovered over ${hoverCount} times`)
 });
 
 //JSButton.addEventListener('mouseout', function()  {
 //    JSButton.innerHTML = "So close!";
 //})
 JSButton.addEventListener("click", function() {
+    clickCount++;
     JSButton.style.animation = "none";
     JSButton.innerHTML = "You caught me!";
     JSButton.style.backgroundColor = "gray";
+    console.log(`Clicked ${clickCount} times`)
 });
