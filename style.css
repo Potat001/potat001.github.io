@@ -169,15 +169,24 @@ body {
     width: 100px;
     height: 100px;
     position: relative;
+    background-color: rgb(172, 172, 172);
 }
 #box {
     width: 100px;
     height: 100px;
     position: relative;
-    background: white;
+    background-color: rgb(172, 172, 172);
     margin-top: 100px;
 }
 @keyframes moveButton {
-    from { left: 0; }
-    to { left: 50%; }
+    0% { left: 0%}
+    100% { left: 90%}
+}
+
+@keyframes rainbowButton {
+    0% { background-color: DodgerBlue}
+    25% { background-color: FireBrick}
+    50% { background-color: green}
+    75% { background-color: purple}
+    100% { background-color: yellow}
 }

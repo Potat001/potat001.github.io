@@ -76,8 +76,6 @@ function root() {
 let hoverCount = 0;
 const JSButton = document.getElementById("JSTestingButton");
 const box = document.getElementById("box");
-const rainbowColors = ["red", "blue", "green", "yellow", "purple"];
-let currentIndex = 0;
 
 
 JSButton.addEventListener("mouseover", function() {
@@ -98,13 +96,15 @@ JSButton.addEventListener("mouseover", function() {
             JSButton.style.backgroundColor = "DodgerBlue";
             break;
         case (hoverCount >= 40 && hoverCount <= 99):
+            JSButton.style.backgroundColor = "DodgerBlue";
             JSButton.innerHTML = `${hoverCount} attempts, you're so close!`
-            currentIndex = (currentIndex + 1) % rainbowColors.length;
-            JSButton.style.backgroundColor = rainbowColors[currentIndex];
+            JSButton.style.animation = "moveButton 5s linear infinite alternate";
+            JSButton.style.animation = "rainbowButton 1s infinite"
             break;
         case (hoverCount >= 100):
             JSButton.innerHTML = `That's enough (${hoverCount}), here you go, click it!`
             JSButton.style.animation = "none";
+            JSButton.style.backgroundColor = "gray";
         }
 
     console.log(`Hovered over ${hoverCount} times`)
@@ -116,4 +116,5 @@ JSButton.addEventListener("mouseover", function() {
 JSButton.addEventListener("click", function() {
     JSButton.style.animation = "none";
     JSButton.innerHTML = "You caught me!";
+    JSButton.style.backgroundColor = "gray";
 });
