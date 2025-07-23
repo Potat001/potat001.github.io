@@ -186,15 +186,19 @@ body {
 }
 
 @keyframes rainbowButton {
-    0% { background-color: DodgerBlue; left: 0%}
+    0% { background-color: DodgerBlue; left: -50%}
     25% { background-color: FireBrick;}
     50% { background-color: green;}
     75% { background-color: purple;}
-    100% { background-color: yellow; left: 90%}
+    100% { background-color: yellow; left: 42%}
 }
 
 #catchButtonText {
     margin-top: 100px;
-    margin-left: 50%;
-    margin-right: 50%;
+    margin-left: 39%;
+}
+
+#tryAgainText {
+    margin-top: 300px;
+    margin-left: 39%;
 }
