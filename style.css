@@ -38,7 +38,7 @@ body {
 .navs {
     float:left;
     height: 20px;
-    width:calc(75% / 5);
+    width:calc(75% / 6);
     background-color: rgb(172, 172, 172);
 }
 
@@ -173,12 +173,12 @@ body {
     position: absolute;
     background-color: rgb(172, 172, 172);
 }
-#box {
+#changeBackgroundColorBlue {
     width: 100px;
     height: 100px;
     position: relative;
-    background-color: rgb(172, 172, 172);
-    margin-top: 100px;
+    background-color: rgb(122, 50, 189);
+    bottom: 60px;
 }
 @keyframes moveButton {
     0% { left: -50%;}
@@ -195,10 +195,5 @@ body {
 
 #catchButtonText {
     margin-top: 100px;
-    margin-left: 39%;
-}
-
-#tryAgainText {
-    margin-top: 300px;
-    margin-left: 39%;
+    margin-left: 20%;
 }
