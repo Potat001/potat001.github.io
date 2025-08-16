@@ -75,9 +75,10 @@ function root() {
 
 let hoverCount = 0;
 let clickCount = 0;
+let clickCount2 = 0;
 const JSButton = document.getElementById("JSTestingButton");
 const box = document.getElementById("box");
-const backgroundBlue = document.getElementById("changeBackgroundColorBlue");
+const changeBackgroundButton = document.getElementById("changeBackgroundButton");
 
 JSButton.addEventListener("mouseover", function() {
     if(hoverCount < 60 && clickCount < 1) {
@@ -92,6 +93,7 @@ JSButton.addEventListener("mouseover", function() {
             JSButton.style.animation = "moveButton 2s linear infinite alternate";
             JSButton.style.backgroundColor = "FireBrick";
             JSButton.innerHTML = "Whoops, there it goes!";
+            JSButton.style.top = "150px";
             catchButtonText.innerHTML = "Catch the button!!! (potential epilepsy warning)";
             break;
         case (hoverCount >= 3 && hoverCount <= 9 && clickCount < 1):
@@ -107,7 +109,7 @@ JSButton.addEventListener("mouseover", function() {
             catchButtonText.innerHTML = "Catch the button!!! (potential epilepsy warning)";
             break;
         case (hoverCount >= 30 && hoverCount <= 59 && clickCount < 1):
-            JSButton.style.backgroundColor = "DodgerBlue";
+            JSButton.style.backgroundColor = "purple";
             JSButton.innerHTML = `${hoverCount} attempts, you're got this!!!`
 
             JSButton.style.animation = "moveButton 2s linear infinite alternate";
@@ -131,10 +133,34 @@ JSButton.addEventListener("click", function() {
         JSButton.style.animation = "none";
         JSButton.innerHTML = `You caught me after ${hoverCount} hovers over the button!`;
         JSButton.style.backgroundColor = "gray";
+        catchButtonText.style.marginLeft = "39%";
         catchButtonText.innerHTML = "You caught the button!!!";
         catchButton.style.marginLeft = "39%";
     }
 });
-backgroundBlue.addEventListener("click", function() {
-    document.documentElement.style.backgroundColor = "blue";
+changeBackgroundButton.addEventListener("click", function() {
+    clickCount2++;
+    console.log(`Clicked 2nd button ${clickCount2} times`)
+    switch(true) {
+        case(clickCount2 == 1):
+            document.documentElement.style.backgroundColor = "DodgerBlue";
+            changeBackgroundButton.innerHTML = "Click me again!";
+            break;
+        case(clickCount2 == 2):
+            document.documentElement.style.backgroundColor = "FireBrick";
+            changeBackgroundButton.innerHTML = "Aaaaand again!";
+            break;
+        case(clickCount2 == 3):
+            document.documentElement.style.backgroundColor = "green";
+            changeBackgroundButton.innerHTML = "Again! :D";
+            break;
+        case(clickCount2 == 4):
+            document.documentElement.style.backgroundColor = "purple";
+            changeBackgroundButton.innerHTML = "Ooooone last time!";
+            break;
+        case(clickCount2 >= 5):
+        document.documentElement.style.backgroundColor = "rgb(24, 24, 24)";
+        changeBackgroundButton.innerHTML = "Aaaand back to normal!";
+        break;
+    }
 });

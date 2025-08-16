@@ -173,13 +173,6 @@ body {
     position: absolute;
     background-color: rgb(172, 172, 172);
 }
-#changeBackgroundColorBlue {
-    width: 100px;
-    height: 100px;
-    position: relative;
-    background-color: rgb(122, 50, 189);
-    bottom: 60px;
-}
 @keyframes moveButton {
     0% { left: -50%;}
     100% { left: 42%;}
@@ -194,6 +187,16 @@ body {
 }
 
 #catchButtonText {
+    position: absolute;
     margin-top: 100px;
     margin-left: 20%;
 }
+
+#changeBackgroundButton {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: DodgerBlue;
+    bottom: 81.5%;
+}
+
