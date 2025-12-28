@@ -94,26 +94,26 @@ JSButton.addEventListener("mouseover", function() {
             JSButton.style.backgroundColor = "FireBrick";
             JSButton.innerHTML = "Whoops, there it goes!";
             JSButton.style.top = "150px";
-            catchButtonText.innerHTML = "Catch the button!!! (potential epilepsy warning)";
+            catchButtonText.innerHTML = "Catch the button!!!";
             break;
         case (hoverCount >= 3 && hoverCount <= 9 && clickCount < 1):
             JSButton.style.animation = "moveButton 2s linear infinite alternate";
             JSButton.innerHTML = `That's ${hoverCount} attempts!`;
             JSButton.style.backgroundColor = "green";
-            catchButtonText.innerHTML = "Catch the button!!! (potential epilepsy warning)";
+            catchButtonText.innerHTML = "Catch the button!!!";
             break;
         case (hoverCount >= 10 && hoverCount <= 39 && clickCount < 1):
             JSButton.style.animation = "moveButton 2s linear infinite alternate";
             JSButton.innerHTML = `That's ${hoverCount} attempts, come on!`;
             JSButton.style.backgroundColor = "DodgerBlue";
-            catchButtonText.innerHTML = "Catch the button!!! (potential epilepsy warning)";
+            catchButtonText.innerHTML = "Catch the button!!!";
             break;
         case (hoverCount >= 30 && hoverCount <= 59 && clickCount < 1):
             JSButton.style.backgroundColor = "purple";
             JSButton.innerHTML = `${hoverCount} attempts, you're got this!!!`
 
             JSButton.style.animation = "moveButton 2s linear infinite alternate";
-            catchButtonText.innerHTML = "Catch the button!!! (potential epilepsy warning)";
+            catchButtonText.innerHTML = "Catch the button!!!";
             break;
         case (hoverCount >= 60 && clickCount < 1):
             JSButton.innerHTML = `That's enough (${hoverCount}), here you go, click it!`

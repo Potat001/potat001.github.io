@@ -22,7 +22,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    background-color:rgb(24, 24, 24);
+    background: linear-gradient(to bottom, rgb(29, 0, 48), rgb(17, 0, 29), rgb(0, 0, 0));
+    /*
+    background-color:rgb(14, 11, 45);
+    */
     margin-left: 0;
     margin-right: 0;
     
@@ -32,29 +35,32 @@ body {
     position:absolute;
     top:0;
     left:0;
+    height: 40px;
     width: 100%;
 }
 
 .navs {
     float:left;
-    height: 20px;
+    height: 100%;
     width:calc(75% / 6);
-    background-color: rgb(172, 172, 172);
+    background-color: rgb(78, 65, 228);
+    border: 0px;
 }
 
 .navBars button:hover {
-    background-color:rgb(136, 136, 136);
+    background-color:rgb(113, 102, 231);
 }
 
 .navBars button:active {
-    background-color:rgb(100, 100, 100);
+    background-color:rgb(154, 148, 223);
 }
 
 .languageSwitch {
     float: right;
     height: 20px;
     width:calc(20% / 3);
-    background-color: rgb(172, 172, 172);
+    background-color: rgb(78, 65, 228);
+    border: 0px;
 }
 /*
 #homePagePictureLinks {
@@ -200,3 +206,6 @@ body {
     bottom: 81.5%;
 }
 
+#indexPageNavbars {
+
+}
