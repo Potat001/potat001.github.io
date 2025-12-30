@@ -22,10 +22,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body {
-    background: linear-gradient(to bottom, rgb(29, 0, 48), rgb(17, 0, 29), rgb(0, 0, 0));
-    /*
-    background-color:rgb(14, 11, 45);
-    */
+    background: linear-gradient(to right, rgb(29, 0, 48), rgb(17, 0, 29), rgb(0, 0, 0));
     margin-left: 0;
     margin-right: 0;
     
@@ -43,8 +40,11 @@ body {
     float:left;
     height: 100%;
     width:calc(75% / 6);
-    background-color: rgb(78, 65, 228);
+    background-color: rgb(119, 0, 255);
+    border-radius: 30px;
     border: 0px;
+    outline: 2px solid rgb(48, 40, 141);
+    margin-right: 2px;
 }
 
 .navBars button:hover {
@@ -57,10 +57,14 @@ body {
 
 .languageSwitch {
     float: right;
-    height: 20px;
+    height: 50%;
     width:calc(20% / 3);
     background-color: rgb(78, 65, 228);
     border: 0px;
+    border-radius: 30px;
+    border: 0px;
+    outline: 2px solid rgb(48, 40, 141);
+    margin-right: 2px;
 }
 /*
 #homePagePictureLinks {
@@ -207,5 +211,32 @@ body {
 }
 
 #indexPageNavbars {
+    position: relative;
+    gap: 8px;
+    padding: 30px;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    border: 10px solid rgb(46, 0, 105);
+    margin-left:auto;
+    margin-right:auto;
+    margin-top: 30px;
+}
 
+#indexPageNavbars button:hover {
+    background-color:rgb(113, 102, 231);
+}
+
+#indexPageNavbars button:active {
+    background-color:rgb(154, 148, 223);
+}
+
+#indexNavs {
+    width: 100%;
+    height: 80px;
+    background-color: rgb(119, 0, 255);
+    border: 0px;
+    outline: 2px solid rgb(53, 0, 122);
 }
