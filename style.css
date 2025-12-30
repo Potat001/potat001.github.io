@@ -223,6 +223,7 @@ body {
     margin-left:auto;
     margin-right:auto;
     margin-top: 30px;
+    border-radius: 30px;
 }
 
 #indexPageNavbars button:hover {
@@ -239,4 +240,5 @@ body {
     background-color: rgb(119, 0, 255);
     border: 0px;
     outline: 2px solid rgb(53, 0, 122);
+    border-radius: 30px;
 }
