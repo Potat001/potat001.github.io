@@ -10,7 +10,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #homePageTitle {
-    margin-top:100px;
+    margin-top: 100px;
 }
 
 #centeredText {
@@ -23,15 +23,16 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     background: linear-gradient(to right, rgb(29, 0, 48), rgb(17, 0, 29), rgb(0, 0, 0));
-    margin-left: 0;
-    margin-right: 0;
-    
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
 }
 
 .navBars {
-    position:absolute;
-    top:0;
-    left:0;
+    position:relative;
+    top: 0px;
+    left: 0px;
     height: 40px;
     width: 100%;
 }
@@ -39,12 +40,16 @@ body {
 .navs {
     float:left;
     height: 100%;
-    width:calc(75% / 6);
+    /*Set to 75% if two or more languages are added later*/
+    width: calc(94% / 5);
+    margin-top: -10px;
     background-color: rgb(119, 0, 255);
     border-radius: 30px;
     border: 0px;
     outline: 2px solid rgb(48, 40, 141);
-    margin-right: 2px;
+    margin-left: 13px;
+    color: white;
+    position: relative;
 }
 
 .navBars button:hover {
@@ -55,6 +60,7 @@ body {
     background-color:rgb(154, 148, 223);
 }
 
+/*Felt cute, might add a language switch later
 .languageSwitch {
     float: right;
     height: 50%;
@@ -66,44 +72,28 @@ body {
     outline: 2px solid rgb(48, 40, 141);
     margin-right: 2px;
 }
-/*
-#homePagePictureLinks {
-    width: 200px;
-    height: 200px;
-}
-*/
-/*
-.kalkulatorIndex {
-    background-color: rgb(148, 148, 148);
-    width: 150px;
-    height:300px;
-    border: 15px solid rgb(102, 9, 94);
-    padding: 30px;
-    margin-left:auto;
-    margin-right:auto;
-}
 */
 
 #calculator {
-    position:relative;
+    position: relative;
     background-color:rgb(51, 51, 51);
     width: 250px;
     border: 10px solid rgb(97, 97, 97);
     padding: 50px;
-    margin-left:auto;
-    margin-right:auto;
-    margin-top:100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
     border-radius: 30px;
 }
 
 #display {
-    width:230px;
-    margin-bottom:15px;
-    font-size:2rem;
-    text-align:left;
-    border:3px solid rgb(85, 85, 85);
+    width: 230px;
+    margin-bottom: 15px;
+    font-size: 2rem;
+    text-align: left;
+    border: 3px solid rgb(85, 85, 85);
     border-radius: 8px;
-    resize:vertical;
+    resize: vertical;
     background-color:rgb(221, 221, 221);
 }
 /*
@@ -124,12 +114,12 @@ body {
 }
 */
 #buttonRows button {
-    width:48px;
-    height:48px;
-    margin-right:10px;
-    margin-bottom:8px;
+    width: 48px;
+    height: 48px;
+    margin-right: 10px;
+    margin-bottom: 8px;
     background-color:rgb(255, 255, 255);
-    cursor:pointer;
+    cursor: pointer;
 }
 #buttonRows button:hover {
     background-color:rgb(207, 207, 207)
@@ -139,7 +129,7 @@ body {
 }
 
 #log_x {
-    font-size:10px;
+    font-size: 10px;
 }
 
 #picturesContainer {
@@ -171,17 +161,16 @@ body {
 }
 
 #JSTestingButton {
-/*
-    margin-right: 50%;
-    margin-left: 20%;
-*/
-    margin-top: 50px;
+    margin-top: 200px;
     margin-left: 50%;
     margin-right: 50%;
     width: 100px;
     height: 100px;
     position: absolute;
-    background-color: rgb(172, 172, 172);
+    background-color: rgb(251, 0, 255);
+    color: white;
+    border: 0px;
+    outline: 2px solid rgb(253, 144, 255);
 }
 @keyframes moveButton {
     0% { left: -50%;}
@@ -189,25 +178,29 @@ body {
 }
 
 @keyframes rainbowButton {
-    0% { background-color: DodgerBlue; left: -50%}
-    25% { background-color: FireBrick;}
-    50% { background-color: green;}
-    75% { background-color: purple;}
-    100% { background-color: yellow; left: 42%}
+    0% { background-color: rgb(30, 144, 255); left: -50% }
+    25% { background-color: rgb(178, 34, 34);}
+    50% { background-color: rgb(0, 128, 0);}
+    75% { background-color: rgb(128, 0, 128);}
+    100% { background-color: rgb(255, 255, 0); left: 42% }
 }
 
 #catchButtonText {
     position: absolute;
     margin-top: 100px;
-    margin-left: 20%;
+    margin-left: 42%;
 }
 
 #changeBackgroundButton {
     width: 100px;
     height: 100px;
+    margin-left: 10px;
     position: absolute;
     background-color: DodgerBlue;
-    bottom: 81.5%;
+    bottom: 70%;
+    color: white;
+    border: 0px;
+    outline: 2px solid rgb(135, 195, 255);
 }
 
 #indexPageNavbars {
@@ -220,8 +213,8 @@ body {
     align-items: stretch;
     flex-direction: column;
     border: 10px solid rgb(46, 0, 105);
-    margin-left:auto;
-    margin-right:auto;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 30px;
     border-radius: 30px;
 }
@@ -241,4 +234,5 @@ body {
     border: 0px;
     outline: 2px solid rgb(53, 0, 122);
     border-radius: 30px;
+    color: white;
 }

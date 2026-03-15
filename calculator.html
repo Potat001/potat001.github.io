@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-<!--Home page-->
+        <br>
         <div class="navBars">
             <a href="index.html">
                 <button class="navs">Homepage</button>
@@ -22,30 +22,21 @@
             <a href="aboutMe.html">
                 <button class="navs">About Me</button>
             </a>
-<!--Language: Norwegian nynorsk-->
-            <button class="languageSwitch">Norsk</button>
-<!--Language: English-->
-            <button class="languageSwitch">English</button>
 <!--Favorite pictures-->
             <a href="favoritePictures.html">
-                <button class="navs">My favorite pictures</button>
-            </a>
-<!--Favorite videos-->
-            <a href="favoriteVideos.html">
-                <button class="navs">My favorite videos</button>
+                <button class="navs">My Favorite Pictures</button>
             </a>
 <!--JS testing-->
             <a href="testingWithJS.html">
-                <button class="navs">JS testing</button>
+                <button class="navs">JavaScript Testing</button>
             </a>
         </div>
     </header>
     <main>
         <div id="calculator">
-<!--To write directly into the calculator (maybe later)-->
-        <!--<input id="display" type="text" oninput="validateMathInput(this)" placeholder="Numbers here...">-->
-<!--The area we write into-->
-            <input id="display" type="text" oninput="writableDisplayValidator(this)" placeholder="Numbers here...">
+            <!--Barely working pos calculator, but it works for the most part-->
+            <input id="display" type="text" oninput="writableDisplayValidator(this)"
+            placeholder="Numbers here...">
             <div id="buttonRows">
                 <button onclick="trigonimetricFunctions('sin')">sin</button>
                 <button onclick="trigonimetricFunctions('cos')">cos</button>
